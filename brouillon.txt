@@ -1,0 +1,88 @@
+label_names = {
+    0 :"T-shirt/top",
+    1 :"Trouser",
+    2 :"Pullover",
+    3 :"Dress",
+    4 :"Coat",
+    5 :"Sandal",
+    6 :"Shirt",
+    7 :"Sneaker",
+    8 :"Bag",
+    9 :'Ankle boot',
+}
+
+df = df_train.copy()
+df['label'] = df.label.replace(label_names)
+
+
+
+
+60 000 et 10 000
+L'erreur de la machine est de  n_erreurs/n_essais  =  41.79 % (avant de retirer les arguments de randomforest)
+
+L'erreur de la machine est de  n_erreurs/n_essais  =  11.709999999999999 % (après avoir retirer les arguments de randomforest) comparer les arguments avec ceux par défaut
+
+
+
+https://openclassrooms.com/fr/courses/4297211-evaluez-les-performances-dun-modele-de-machine-learning/4308256-evaluez-un-algorithme-de-classification-qui-retourne-des-valeurs-binaires
+
+
+questions à poser :
+- faut-il faire plusieurs couches de neurones ? oui
+- est-il mieux de s'entrainer à 100 échantillons par type d'objets ? ca devrait être mieux ( faire le test) équilibre de la base de données on peut écrire dans le rapport (en parler lorsque on fais un sous-ensemble
+- le projet vaut pour combien de % ? a peu près équilibré
+- les arguments de random forest comparer les arguments avec ceux par défaut
+
+
+si je fais un classifieur aléatoire, quelle est l'éspérance
+matrice de confusion
+
+utiliser les outils du cours
+interpreter les résultats
+faire des recherches
+aspects critiques
+pas faire du hors sujet
+réseaux de neurones convolutifs
+
+
+faire un tabaleau moy precision, moy recall, exactitude ...
+
+https://datascientest.com/danielcomment-lire-et-exploiter-une-matrice-de-confusion
+
+configurer randomforest
+https://www.it-swarm-fr.com/fr/python/comment-ajuster-les-parametres-dans-random-forest-en-utilisant-scikit-learn/823309376/
+
+peut-on utiliser gridsearch ou alors il faut interpreter de nous memes ?
+
+pour séparer sur excel : données - convertir
+
+pour améliorer le classifieur
+https://www.invivoo.com/ameliorer-performance-prediction-obtenue-machine-learning/
+
+********************************************************************************************************************
+# Print iterations progress
+def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█'):
+    """
+    Call in a loop to create terminal progress bar
+    @params:
+        iteration   - Required  : current iteration (Int)
+        total       - Required  : total iterations (Int)
+        prefix      - Optional  : prefix string (Str)
+        suffix      - Optional  : suffix string (Str)
+        decimals    - Optional  : positive number of decimals in percent complete (Int)
+        length      - Optional  : character length of bar (Int)
+        fill        - Optional  : bar fill character (Str)
+    """
+    percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+    filledLength = int(length * iteration // total)
+    bar = fill * filledLength + '-' * (length - filledLength)
+    print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end = '\r')
+    # Print New Line on Complete
+    if iteration == total:
+        print()
+
+
+#printProgressBar(0, n_test, prefix='Progress:', suffix='Complete', length=50)
+
+     #time.sleep(0.1)
+        #printProgressBar(i, n_test, prefix='Progress:', suffix='Complete', length=50)
