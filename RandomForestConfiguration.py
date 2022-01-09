@@ -30,7 +30,7 @@ for i in range(len(functions.label_names)):
 
 print("taille : ",taille)
 
-liste = ['linear', 'poly', 'rbf', 'sigmoid']
+liste = [1, 0.1, 0.01, 0.001, 0.0001]
 
 err =[]
 
@@ -39,7 +39,7 @@ for i in range(len(liste)):
     print(i)
     print("Génération du classifieur en cours ...")
     #clf = RandomForestClassifier(max_depth=i)
-    clf = svm.SVC(kernel = liste[i])
+    clf = svm.SVC(C = 1000, gamma = liste[i])
     clf.fit(X, y)
     print("Le classifieur a été généré avec succès !", '\n')
 
@@ -71,4 +71,6 @@ print("err = ",err)
 
 plt.plot(liste,err,"ro-")
 plt.ylabel("Taux d'erreurs")
+plt.xscale('log')
 plt.show()
+

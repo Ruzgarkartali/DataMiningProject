@@ -86,3 +86,49 @@ def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, 
 
      #time.sleep(0.1)
         #printProgressBar(i, n_test, prefix='Progress:', suffix='Complete', length=50)
+
+***************** RESEAUX DE NEURONES ***************************
+
+avec hidden layer size = (784,)
+
+
+Génération du classifieur en cours ...
+Le classifieur a été généré avec succès !
+
+Temps de calcul de la génération :  1370.025992155075  secondes
+La machine effectue le test ...
+
+Temps de calcul du test :  356.05754470825195  secondes
+matrice de confusion :
+             T-shirt/top  Trouser  Pullover  ...  Sneaker  Bag  Ankle boot
+T-shirt/top          843        0        14  ...        0   13           0
+Trouser                0      978         5  ...        0    1           0
+Pullover               9        1       813  ...        0    4           0
+Dress                 19        9         9  ...        0    2           0
+Coat                   1        2       115  ...        0    5           0
+Sandal                 2        1         1  ...       28   10          24
+Shirt                161        1        93  ...        0   13           0
+Sneaker                0        0         0  ...      935    3          48
+Bag                    4        1         2  ...        2  970           0
+Ankle boot             0        0         0  ...       38    2         953
+
+[10 rows x 10 columns]
+analyse :
+              precision    recall  f1-score   support
+
+ T-shirt/top       0.81      0.84      0.83      1000
+     Trouser       0.98      0.98      0.98      1000
+    Pullover       0.77      0.81      0.79      1000
+       Dress       0.89      0.91      0.90      1000
+        Coat       0.83      0.76      0.79      1000
+      Sandal       0.98      0.93      0.96      1000
+       Shirt       0.67      0.65      0.66      1000
+     Sneaker       0.93      0.94      0.93      1000
+         Bag       0.95      0.97      0.96      1000
+  Ankle boot       0.93      0.95      0.94      1000
+
+    accuracy                           0.87     10000
+   macro avg       0.87      0.87      0.87     10000
+weighted avg       0.87      0.87      0.87     10000
+
+
