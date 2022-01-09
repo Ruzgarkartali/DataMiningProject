@@ -1,0 +1,55 @@
+
+Entrez un choix : 
+3
+***************** RESEAUX DE NEURONES *************************** 
+
+Génération du classifieur en cours ...
+Iteration 1, loss = 1.58517044
+Iteration 2, loss = 1.10424481
+Iteration 3, loss = 0.90914759
+Iteration 4, loss = 0.82728478
+Iteration 5, loss = 0.78944715
+Iteration 6, loss = 0.74406888
+Iteration 7, loss = 0.75720256
+Iteration 8, loss = 0.73062921
+Iteration 9, loss = 0.71259335
+Iteration 10, loss = 0.70680100
+C:\Users\pc gamer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sklearn\neural_network\_multilayer_perceptron.py:692: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (10) reached and the optimization hasn't converged yet.
+  warnings.warn(
+Le classifieur a été généré avec succès ! 
+
+Temps de calcul de la génération :  312.5797817707062  secondes
+La machine effectue le test ...
+
+Temps de calcul du test :  361.0849039554596  secondes
+matrice de confusion : 
+             T-shirt/top  Trouser  Pullover  ...  Sneaker  Bag  Ankle boot
+T-shirt/top          695        7        22  ...        0   25           1
+Trouser                3      936        19  ...        0    1           0
+Pullover              18        1       736  ...        0   16           0
+Dress                 42       32         9  ...        0    7           0
+Coat                   8        3       233  ...        0   42           0
+Sandal                 2        0         0  ...       92    9          68
+Shirt                165        3       402  ...        0   45           0
+Sneaker                0        0         0  ...      895    1          85
+Bag                    6        0        17  ...       13  937           2
+Ankle boot             0        0         0  ...       67    1         903
+
+[10 rows x 10 columns]
+analyse :
+              precision    recall  f1-score   support
+
+ T-shirt/top       0.74      0.69      0.72      1000
+     Trouser       0.95      0.94      0.94      1000
+    Pullover       0.51      0.74      0.60      1000
+       Dress       0.69      0.87      0.77      1000
+        Coat       0.68      0.46      0.55      1000
+      Sandal       0.94      0.83      0.88      1000
+       Shirt       0.31      0.19      0.24      1000
+     Sneaker       0.84      0.90      0.87      1000
+         Bag       0.86      0.94      0.90      1000
+  Ankle boot       0.85      0.90      0.88      1000
+
+    accuracy                           0.75     10000
+   macro avg       0.74      0.75      0.73     10000
+weighted avg       0.74      0.75      0.73     10000
